@@ -1,5 +1,13 @@
-function App() {
-  return <h1 className="text-center text-red-400">Hello React</h1>
+import ListView from "./components/list-item/list-view"
+import { Toaster } from "./components/ui/sonner"
+
+const App = () => {
+  return (
+    <div className="min-h-screen bg-background">
+      <ListView />
+      <Toaster position="top-center" richColors />
+    </div>
+  )
 }
 
 export default App
