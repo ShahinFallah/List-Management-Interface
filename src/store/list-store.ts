@@ -1,4 +1,5 @@
 import { create } from "zustand"
+import { v4 as uuidv4 } from "uuid"
 import type { ListItem } from "../types/item"
 
 type ListStore = {
@@ -14,7 +15,7 @@ export const useListStore = create<ListStore>()((set) => ({
     set((state) => ({
       items: [
         {
-          id: crypto.randomUUID(),
+          id: uuidv4(),
           title,
           subtitle,
           createdAt: new Date()
